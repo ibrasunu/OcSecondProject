@@ -1,0 +1,66 @@
+  @import url('https://fonts.googleapis.com/css2?family=Playball&family=Raleway:wght@300;400;500;700;800;900&display=swap');
+
+  /* 
+^       general statement 
+*/
+body {
+    font-family: "Raleway", "sans-serif";
+    box-sizing: border-box;
+}
+
+/* 
+^       set color variables 
+*/
+:root {
+    --blue : #0065FC;
+    --light-blue : #DEEBFF;
+    --grey : lightgrey;
+    --dark-grey : dimgrey;
+    --light-grey : #f2f2f2;
+    --white: white;
+    --green-fluo: #39FF14;
+}
+
+/*  
+*       hidden <label> position for accessibility       
+*/
+.accessibility-label {
+	position:absolute;
+	left:-999px;
+}
+
+main, header, footer {
+    max-width: 1400px;                      
+    margin: 0 auto;                         
+    padding : 0 15px;                       
+}
+
+
+
+
+/* 
+^----------------------
+*    NAVIGATION MENU     
+^----------------------
+*/
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#logo {
+    margin-right: auto;
+} 
+
+.menu {
+    text-decoration: none;
+    padding: 30px;                            /* puts spaces around menu choices */
+    color: black;
+    border-top: 3px solid transparent;        /* Transparent top line that turns blue on hover */
+}
+
+.menu:hover {
+    border-top-color: var(--blue);
+    color: var(--blue);
+}
