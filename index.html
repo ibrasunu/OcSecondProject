@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booki</title>
     <script src="https://kit.fontawesome.com/ef16e9650c.js" crossorigin="anonymous"></script>
-
     <!-- css files in order -->
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
-
-    <title>Booki</title>
 </head>
 <body>
      <!-- HEADER-->
     <header>
             <nav>
-                <a href="#" id="logo"><img src="ASSETS/logo/Booki.png" alt="Logo du site réservia"></a>
+                <a href="#" id="logo"><img src="ASSETS/logo/Booki.png" alt="Logo du site"></a>
                 <div class="bloc-menu">
-                    <a href="#lien-articles" class="menu">Hébergements</a>
-                    <a href="#lien-activites" class="menu">Activités</a>
+                    <a href="#articles-link" class="menu">Hébergements</a>
+                    <a href="#activites-link" class="menu">Activités</a>
                 </div>
             </nav>
-    </header>   
+    </header> 
+    <main>
+        <!-- SEARCH FORM -->
+        <form action="#">
+            <div class="btn-search">
+                <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" id="search" placeholder="Marseille, France">
+                <button><span>Rechercher</span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button><br>
+            </div>
+        </form>
+        <!--FILTER-->
+            <div class="filters">
+                <h3>Filtres</h3>
+                <div class='btn-filter'>
+                    <p><i class="fa-solid fa-money-bill-wave"></i>Économique</p>
+                </div>
+                <div class='btn-filter'>
+                    <p><i class="fa-solid fa-child-reaching"></i>Familiale</p>
+                </div>
+                <div class='btn-filter'>
+                    <p><i class="fa-solid fa-heart"></i>Romantique</p>
+                </div>
+                <div class='btn-filter'>
+                    <p><i class="fa-solid fa-dog"></i>Animaux autorisés</p>
+                </div>
+            </div>
+            <div id="icon-info">
+                <i class="fa-solid fa-info"></i>
+                <p> Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        <!-- HEBERGEMENT -->
+        <section class="articles" id="articles-link">
+
+        </section>
+    </main>  
 </body>
 </html>

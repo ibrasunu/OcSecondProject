@@ -1,16 +1,12 @@
   @import url('https://fonts.googleapis.com/css2?family=Playball&family=Raleway:wght@300;400;500;700;800;900&display=swap');
 
-  /* 
-^       general statement 
-*/
+  /*  general statement */
 body {
     font-family: "Raleway", "sans-serif";
     box-sizing: border-box;
 }
 
-/* 
-^       set color variables 
-*/
+/*color variables*/
 :root {
     --blue : #0065FC;
     --light-blue : #DEEBFF;
@@ -19,14 +15,6 @@ body {
     --light-grey : #f2f2f2;
     --white: white;
     --green-fluo: #39FF14;
-}
-
-/*  
-*       hidden <label> position for accessibility       
-*/
-.accessibility-label {
-	position:absolute;
-	left:-999px;
 }
 
 main, header, footer {
@@ -38,15 +26,13 @@ main, header, footer {
 
 
 
-/* 
-^----------------------
-*    NAVIGATION MENU     
-^----------------------
-*/
+/*  NAVIGATION MENU  */
+
 nav {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    flex-wrap: wrap;    
 }
 
 #logo {
@@ -55,12 +41,128 @@ nav {
 
 .menu {
     text-decoration: none;
-    padding: 30px;                            /* puts spaces around menu choices */
+    padding: 30px;                            
     color: black;
-    border-top: 3px solid transparent;        /* Transparent top line that turns blue on hover */
+    border-top: 3px solid transparent;       
 }
 
 .menu:hover {
     border-top-color: var(--blue);
     color: var(--blue);
+}
+
+/* SEARCH BAR */
+form {
+    display: inline-block;
+    width: 100%;
+}
+
+form i {
+    background-color: var(--light-grey);
+    padding: 10px 13px;
+    border-radius: 15px 0 0 15px;
+}
+
+form input {
+    border: 1px solid var(--light-grey);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 0 7px 10px;
+    margin-left: -5px;
+}
+
+form input::placeholder {
+    color: black;
+}
+
+form h1 {
+    font-size: 20px;
+}
+
+form button {
+    border-radius: 0 14px 14px 0;
+    background-color: var(--blue);
+    border: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 9px 17px 8px 17px;
+    cursor: pointer;
+    margin-left: -5px;
+}
+
+form button:hover {
+    box-shadow: 1px 1px 10px var(--dark-grey);
+}
+
+/* make the magnifying glass disappear */
+.fa-solid.fa-magnifying-glass {
+    display: none;  
+}
+
+/*Filtre*/
+.filters {
+    display:flex;
+    padding-top: 18px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+ }
+
+ .filters h3 {
+    margin-right: 20px;
+}
+
+.btn-filter p {
+    margin: 0;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.btn-filter {
+    font-weight: bold;
+    border: 1px solid var(--light-grey);
+    border-radius: 30px;
+    border-left: none;
+}
+
+.btn-filter:hover{
+    background-color: var(--light-grey);
+    box-shadow: 0 0 8px var(--blue);
+}
+  
+.btn-filter .fa-solid {
+    background-color: var(--light-blue);
+    border-radius: 30px;
+}
+
+.btn-filter .fa-child-reaching {
+    padding: 14px 17px 14px 17px;
+    margin-right: 10px;
+    color: var(--blue);
+}
+
+.btn-filter .fa-heart, .fa-dog, .fa-money-bill-wave {
+    padding: 14px 14px 14px 14px;
+    margin-right: 10px;
+    color: var(--blue);
+}
+
+
+/* barre d'information
+*/
+#icon-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}  
+
+.fa-solid.fa-info {
+    border: 1px solid var(--light-grey);
+    border-radius: 50%;
+    color: var(--blue);
+    height: 25px;   
+    width: 25px;
+    font-size: 16px;
+    margin-right: 5px;
 }
