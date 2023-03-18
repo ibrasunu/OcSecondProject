@@ -23,9 +23,10 @@
 body{
     width: 100%;
     max-width: 1440px;
-    padding: 15px;
+    padding: 0 15px 0 15px;
     margin: auto;
     box-sizing: border-box;
+
 }
 
 .section-title {
@@ -35,13 +36,12 @@ body{
 
 .card {
     background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 8px var(--dark-grey);
-    
+    border-radius: 20px;   
 }   
  .card:hover{
         background-color: var(--main-bg-color);
         box-shadow: 0 0 8px var(--main-color);
+        cursor: pointer;
  }
 .card img {
     object-fit: cover;
@@ -64,34 +64,37 @@ body{
 *    HEADER   
 ^----------------------
 */
-.header-logo img {
-   width: 100px;
-   height: auto;
-}
-
-header{
+header {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
-    padding-top: 25px;
+    margin-bottom: 40px;
+
+
 }
-header nav ul {
+
+header .logo img {
+    display: block;
+    margin: auto;
+    height: 30px;
+} 
+.nav-menu{
     display: flex;
-    list-style-type: none;
-}
+    /* flex-basis: 100%;
+    text-align: center;
+    background-color: chartreuse; */
 
-header nav ul li a{
-    color: black;
+}
+.menu {
     text-decoration: none;
-    padding-top: 46px;
-    padding-right: 33.5px;
-    padding-left: 33.5px;
-}
+    padding: 30px;                            
+    color:black;
+    border-top: 3px solid transparent; 
+}       
 
-header nav ul li a:hover{
+.menu:hover {
+    border-top-color: var(--main-color);
     color: var(--main-color);
-    border-top: 3px solid var(--main-color);
 }
 
 /* search-and-info */
@@ -151,7 +154,7 @@ form button:hover {
     padding-top: 18px;
     flex-wrap:wrap;
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
  }
 
  .filters h4 {
@@ -181,7 +184,7 @@ form button:hover {
     background-color: var(--main-bg-color);
     box-shadow: 0 0 8px var(--main-color);
 }
-  
+
 .btn-filter .fa-solid {
     background-color: var(--filter-bg-color);
     border-radius: 30px;
@@ -231,6 +234,7 @@ form button:hover {
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
+    margin-bottom: 50px;
 }
 
 /****** Hebergements ***********/
@@ -338,27 +342,21 @@ form button:hover {
 .activites {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    
-
+    margin:auto;
+    width: 95%;
+    margin-bottom: 50px;
     
 }
+
 .activites-cards {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .vertical-center {
-    display: flex;
     align-items: center;
-    margin: auto 0;
-    height: 60px;
     margin-left: 20px;
 }
-.largeur {
-    max-width: 350px;
-    min-width: 200px;
-}
+
 .param-card-activity {
     display: flex;
     flex-direction: column;
@@ -368,13 +366,13 @@ form button:hover {
 }
  .activites .card img {
     width: 100%;
-    height: 90%;   
+    height: 340px;   
     border-radius: 16px 16px 0 0;
 }
 .activites .card:hover {
     transform: scale(1.02);
     box-shadow: 0 0 8px var(--main-color);
-    cursor: pointer;
+    
 }
 
 /* Footer */
@@ -387,7 +385,6 @@ footer {
     gap: 20px;
     background-color: var(--main-bg-color);
     padding: 30px 0;
-    margin-top: 50px;
     
 }
 footer a {
@@ -407,49 +404,6 @@ footer p {
 .footer-right {
     min-width: 30%;
     min-height: 100px;
-}
-
-
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-@media (max-width: 768px) {
-    * {
-        margin-left: 0px;
-    }
-
-
-/*
-    *   section: menu 
-    */
-    header{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-    header-logo img {
-        display: block;
-        margin: auto;
-        padding-left: 40px;
-    }
-
-    header nav ul {
-        display: flex;
-        flex-basis: 100%;
-        text-align: center;
-    }
-    header nav ul li a {
-        flex-basis: 50%;
-        text-align: center;
-        justify-content: center;
-        border-bottom: 3px solid var(--grey);
-        
-    }
-    header nav ul li a:hover {
-        border-top-color: transparent;
-        border-bottom-color: var(--main-color);  
-    }
 }
 
 /****** Media queries ***********/
@@ -486,4 +440,106 @@ footer p {
         font-size: 13px;
     }
 }
+
+/* Medium devices (tablets, less/equal than 768px) */
+@media (max-width: 768px) {
+
+    /* header*/
+    body{
+    
+    }
+
+    header {
+        display: block;
+        padding-top: 15px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .nav-menu a {
+        flex-basis: 50%;
+        text-align: center;
+        justify-content: center;
+        border-bottom: 3px solid var(--main-bg-color);
+    }
+    .nav-menu a:hover {
+        border-top-color: transparent;
+        border-bottom-color: var(--main-color);  
+    }
+
+     /* Section: Search bar*/
+
+
+    .fa-solid.fa-magnifying-glass {
+        display: inline;
+        background-color: var(--main-color);
+        margin-left: -5px;
+        font-size: 15px;
+        padding: 0;
+        color:white;
+        
+    }
+    .btn-search span {
+        display: none;
+    }
+    /* Hébergements */
+    .hebergements-and-populaires{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hebergements-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .hebergements-cards .card {
+        width: 100%;
+        
+    }
+    .hebergements-cards .card img {
+        height: 200px;
+    }
+    /* Populaires */
+    .populaires-cards{
+        display: flex;
+        flex-direction: column;
+        ;
+    }
+
+    .populaires-cards .card {
+        width: 100%;
+    }
+
+    /* activites */
+
+    .activites{
+        margin-bottom: 0;
+    }
+
+    .activites-cards {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .activites-cards .card img{
+        height: 200px;
+    }
+
+    
+    /*Footer */
+    footer {
+        display: block;
+        padding-left: 30px;
+    }
+    .footer-left, .footer-middle {
+        margin-bottom: 25px;
+    }
+}
+
 
