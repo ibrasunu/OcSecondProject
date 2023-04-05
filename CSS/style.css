@@ -145,7 +145,7 @@ form button:hover {
  }
 
  .filters h4 {
-    margin-right: 20px;
+    margin-right: 18px;
 }
 
 .filter-btn-box{
@@ -396,7 +396,7 @@ footer p {
 /****** Media queries ***********/
 
 /* Medium devices (tablets, less than 1024px) */
-@media (max-width: 1023px) {
+@media (max-width: 1023px)  {
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column;
@@ -427,7 +427,7 @@ footer p {
 }
 
 
-/* Mobile devices (less/equal than 768px) */
+/* Mobile devices (less than 768px) */
 @media (max-width: 768px) {
     body{
         padding: 0px;
@@ -459,7 +459,7 @@ footer p {
      
      #find{
         padding :20px;
-        
+
         
     }
 
