@@ -4,7 +4,7 @@
   * {
     font-family: 'Raleway', sans-serif;
 }
-
+/* colors variables */
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -17,8 +17,6 @@
 .fa-solid {
     color: var(--main-color);
 }
-
-
 
 body{
     width: 100%;
@@ -60,11 +58,7 @@ body{
     color: var(--main-bg-color)
 }
 
-/* 
-^----------------------
-*    HEADER   
-^----------------------
-*/
+/*  HEADER  */
 header {
     display: flex;
     justify-content:space-between;
@@ -81,10 +75,6 @@ header .logo img {
 } 
 .nav-menu{
     display: flex;
-    /* flex-basis: 100%;
-    text-align: center;
-    background-color: chartreuse; */
-
 }
 .menu {
     text-decoration: none;
@@ -98,10 +88,7 @@ header .logo img {
     color: var(--main-color);
 }
 
-/* search-and-info */
-    
-
-    
+/* search-bar */   
 
 form i {
     background-color: var(--main-bg-color);
@@ -201,11 +188,10 @@ form button:hover {
     color: var(--main-color);
 }
 
-/*Barre d'information*/
+/*Info bar*/
 #info-icon {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
 }  
 
 .fa-solid.fa-info {
@@ -222,7 +208,7 @@ form button:hover {
 }
 
 
-/****** Hebergements And Populaires ***********/
+/* Hebergements And Populaires */
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -236,7 +222,7 @@ form button:hover {
     margin-bottom: 50px;
 }
 
-/****** Hebergements ***********/
+/* Hebergements */
 .hebergements {
     width: 65%;
     }
@@ -290,7 +276,7 @@ form button:hover {
 }
 
 
-/****** Populaires ***********/
+/* Populaires */
 .populaires {
     width: 32%;
 }
@@ -337,7 +323,6 @@ form button:hover {
 }
 
 /* Activites  à Marseille*/
-
 .activites {
     display: flex;
     flex-direction: column;
@@ -345,6 +330,11 @@ form button:hover {
     width: 95%;
     margin-bottom: 50px;
     
+}
+.activites h2{
+    font-size: 22px;
+    margin-bottom: 50px;
+    margin-top: 0px;
 }
 
 
@@ -358,7 +348,7 @@ form button:hover {
     font-size: 14px;
 }
 
-.param-card-activity {
+.card-ajust{
     display: flex;
     flex-direction: column;
     flex-basis: 22%;
@@ -398,16 +388,15 @@ footer p {
     margin-bottom: 5px;
 }
 
-.footer-left, 
-.footer-middle, 
-.footer-right {
+.footer-left, .footer-middle, .footer-right {
     min-width: 30%;
     min-height: 100px;
 }
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
+
+/* Medium devices (tablets, less than 1024px) */
+@media (max-width: 1023px) {
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column;
@@ -438,7 +427,7 @@ footer p {
 }
 
 
-/* Medium devices (less/equal than 768px) */
+/* Mobile devices (less/equal than 768px) */
 @media (max-width: 768px) {
     body{
         padding: 0px;
@@ -454,13 +443,10 @@ footer p {
 
     .nav-menu {
         display: flex;
-        justify-content: space-evenly;
-        text-align: center;
     }
     .nav-menu a {
         flex-basis: 50%;
         text-align: center;
-        justify-content: center;
         border-bottom: 3px solid var(--dark-grey);
 
     }
@@ -473,6 +459,7 @@ footer p {
      
      #find{
         padding :20px;
+        
         
     }
 
@@ -494,10 +481,10 @@ footer p {
     }
 
     
-    /*Barre d'information*/
+    /*Info bar*/
 
     #info-icon {
-        margin: bottom 0px;;
+        margin: 0px;;
     }
     
 
@@ -526,12 +513,17 @@ footer p {
         width: 100%;
         height: auto;
         
+        
+    }
+    .hebergements a{
+        font-size: 16px;
     }
     
     /* Populaires */
     .hebergements-and-populaires section.populaires {
         background-color: var(--main-bg-color);
         border-radius: 0px;
+        margin-bottom: 0px;
     }
     
     .populaires-cards{
@@ -550,9 +542,8 @@ footer p {
         margin: auto;
     }
 
-    .activites h2{
-        font-size: 1.2em;
-        margin-bottom: 40px;
+    .activites h2, .section-title{
+        font-size: 18px;
     }
 
     .activites-cards {
@@ -578,13 +569,5 @@ footer p {
     }
 }
 
-@media (max-width: 458px) {
-    #find{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        
-    }
-}
 
 
