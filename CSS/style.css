@@ -440,7 +440,6 @@ footer p {
         padding-top: 20px;
     }
     
-
     .nav-menu {
         display: flex;
     }
@@ -458,18 +457,14 @@ footer p {
      /* Section: Search bar*/
      
      #find{
-        padding :20px;
-
-        
+        padding :20px;       
     }
-
     .fa-solid.fa-magnifying-glass {
         display:block;
         background-color: var(--main-color);
         font-size: 15px;
         padding: 0;
-        color:white;
-        
+        color:white; 
     }
     form button {
         border-radius: 10px;
@@ -479,16 +474,13 @@ footer p {
     .btn-search span {
         display: none;
     }
-
-    
     /*Info bar*/
-
     #info-icon {
         margin: 0px;;
     }
     
 
-    /* Hébergements */
+    /* Hébergements and populaires */
 
     .hebergements-and-populaires section.hebergements {
         background-color: var(--white);
